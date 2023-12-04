@@ -1,0 +1,22 @@
+#!/bin/bash
+# Check if the environment variable PYFILE is set
+if [ -z "$PYFILE" ]; then
+    echo "PYFILE is not set"
+    exit 1
+fi
+
+# Check if the file name stored in PYFILE exists and is a Python file
+if [ ! -f "$PYFILE" ] || [ "${PYFILE: -3}" != ".py" ]; then
+    echo "Invalid file name"
+    exit 1
+fi
+
+# Import the py_compile module and compile the file
+echo "Compiling $PYFILE ..."
+python -m py_compile "$PYFILE"
+
+# Rename the output file to PYFILEc
+mv "${PYFILE}c" "$PYFILEc"
+
+# Print the output file name
+echo "Output file name: $PYFILEc"
