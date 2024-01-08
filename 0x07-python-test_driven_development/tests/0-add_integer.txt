@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+"""
+   Unit test
+"""
+import unittest
+from my_module import add_integer
+
+class TestAddInteger(unittest.TestCase):
+    def test_add_integer(self):
+        """ Test case for adding two integers """
+        self.assertEqual(add_integer(2, 3), 5)
+
+        """ Test case for adding two floats """
+        self.assertEqual(add_integer(2.0, 3.0), 5)
+
+        """ Test case for adding an integer and a float """
+        self.assertEqual(add_integer(2, 3.0), 5)
+
+        """ Test case for adding a float and an integer """
+        self.assertEqual(add_integer(2.0, 3), 5)
+
+        """ Test case for raising TypeError when a is not an integer or a float """"
+        with self.assertRaises(TypeError):
+            add_integer('a', 3)
+
+        """ Test case for raising TypeError when b is not an integer or a float """
+        with self.assertRaises(TypeError):
+            add_integer(2, 'b')
+
+        """ Test case for casting float to integer """
+        self.assertEqual(add_integer(2.5, 3), 5)
+
+        """ Test case for casting float to integer """
+        self.assertEqual(add_integer(2, 3.5), 5)
+
+if __name__ == '__main__':
+    unittest.main()
