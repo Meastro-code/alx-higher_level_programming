@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+"""
+  class rectangle
+"""
+class Rectangle(BaseGeometry):
+    """ class rectangle """
+    def __init__(self, width, height):
+        """ function to create instance obj """
+        self.__width = 0
+        self.__height = 0
+        super().__init__()
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
