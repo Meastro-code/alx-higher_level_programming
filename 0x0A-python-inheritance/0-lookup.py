@@ -4,4 +4,4 @@
 """
 def lookup(obj):
     """ function that returns lists of attributes and methods of obj """
-    return [attr for attr in dir(obj) if not callable(getattr(obj, attr))]
+    return [attr for attr in dir(obj)]
