@@ -7,7 +7,7 @@ from models.base import Base
 class Rectangle(Base):
     """ class rectangle inherits from base class """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ function to create rectangle object """
+        """ function create rect obj """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -67,4 +67,10 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
+        """ function calculate area """
         return self.width * self.height
+
+    def display(self):
+        """ function display area """
+        for i in range(self.height):
+            print("#" * self.width)
