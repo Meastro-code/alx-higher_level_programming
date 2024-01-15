@@ -5,7 +5,7 @@
 from models.base import Base
 
 class Rectangle(Base):
-    """ class rectangle inherits from class base """
+    """ class rectangle inherits from base class """
     def __init__(self, width, height, x=0, y=0, id=None):
         """ function to create rectangle object """
         super().__init__(id)
@@ -65,3 +65,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
+
+    def area(self):
+        return self.width * self.height
