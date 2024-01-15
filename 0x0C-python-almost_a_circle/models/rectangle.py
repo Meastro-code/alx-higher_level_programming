@@ -5,9 +5,9 @@
 from models.base import Base
 
 class Rectangle(Base):
-    """ class rectangle inherits from base class """
+    """ class rectangle inherits from base """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ function create rect obj """
+        """ function create obj instance """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -74,3 +74,7 @@ class Rectangle(Base):
         """ function display area """
         for i in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """ function string obj """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
