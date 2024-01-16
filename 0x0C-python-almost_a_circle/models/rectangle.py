@@ -5,7 +5,7 @@
 from models.base import Base
 
 class Rectangle(Base):
-    """ class rectangle """
+    """ class rectangle inherits from base class """
     def __init__(self, width, height, x=0, y=0, id=None):
         """ func init """
         super().__init__(id)
