@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-  Class Base
+  Class Base initializes object to be inherited
 """
 class Base:
     __nb_objects = 0
