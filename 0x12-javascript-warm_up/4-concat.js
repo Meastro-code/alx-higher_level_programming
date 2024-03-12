@@ -6,4 +6,4 @@ function printArguments (arg1, arg2) {
 
 // Example usage:
 
-printArguments(process.argv.slice(2)[0], process.argv.slice(2)[1])
+printArguments(process.argv.slice(2)[0], process.argv.slice(2)[1]);
