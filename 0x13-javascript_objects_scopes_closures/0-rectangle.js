@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 class Rectangle {
   constructor () {
     // Initialize any properties you need here
@@ -11,3 +12,5 @@ class Rectangle {
   //     return 0; // Since it's an empty rectangle
   // }
 }
+
+module.exports = Rectangle; // Export the class for use in other files
