@@ -1,0 +1,22 @@
+#!/usr/bin/node
+
+const { dict } = require('./101-data');
+
+// Initialize an empty dictionary for the new result
+const result = {};
+
+// Iterate through the original dictionary
+for (const userId in dict) {
+  const occurrences = dict[userId];
+
+  // If the occurrences count is not already a key in the result, create it
+  if (!result[occurrences]) {
+    result[occurrences] = [];
+  }
+
+  // Add the user ID to the list of IDs for the given occurrences count
+  result[occurrences].push(userId);
+}
+
+// Print the new dictionary
+console.log(result);
